@@ -1,0 +1,31 @@
+.footer {
+  background-color: #20222b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer h4 {
+  font-weight: 500;
+}
+
+.copyright {
+  margin-left: 50px;
+}
+
+.footer-icons {
+  margin-right: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icons a {
+  color: whitesmoke;
+  transition: 1s;
+}
+
+.footer-icons a:hover {
+  color: rgba(245, 245, 245, 0.466);
+}

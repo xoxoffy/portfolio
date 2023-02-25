@@ -1,0 +1,17 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-title h1 {
+  font-size: 3rem;
+}
+
+.contact-info {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
