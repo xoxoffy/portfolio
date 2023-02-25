@@ -22,3 +22,17 @@
   width: 100%;
   border-radius: 90px;
 }
+
+.slick-dots li button:before {
+  color: white;
+  font-size: 12px;
+}
+
+.slick-prev {
+  margin-left: -10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 32px;
+}
