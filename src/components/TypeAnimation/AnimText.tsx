@@ -2,7 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 interface Props {
   animText: string;
-  animWrapper?:
+  animWrapper:
     | 'p'
     | 'div'
     | 'span'
@@ -16,20 +16,14 @@ interface Props {
     | 'h6'
     | 'aside'
     | 'b';
-  animSpeed?: number;
 }
 
 const AnimText: React.FunctionComponent<Props> = ({
   animText = 'Animation text',
   animWrapper = 'span',
-  animSpeed = 40,
 }) => {
   return (
-    <TypeAnimation
-      sequence={[animText]}
-      wrapper={animWrapper}
-      speed={animSpeed}
-    />
+    <TypeAnimation sequence={[animText]} wrapper={animWrapper} speed={40} />
   );
 };
 
