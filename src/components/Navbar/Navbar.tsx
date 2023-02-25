@@ -1,5 +1,4 @@
-import './NavBar.css';
-
+import './Navbar.css';
 interface Props {
   onPortfolioButtonClick: () => void;
   onContactButtonClick: () => void;
