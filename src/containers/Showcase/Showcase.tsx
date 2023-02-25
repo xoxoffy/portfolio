@@ -5,7 +5,7 @@ import AnimText from '../../components/TypeAnimation/AnimText';
 const Showcase: React.FunctionComponent = () => {
   return (
     <div className="showcase">
-      <AnimText animText="Moje projekty" animWrapper="h1" animSpeed={40} />
+      <AnimText animText="Moje projekty" animWrapper="h1" />
       <Project />
       <Project />
     </div>

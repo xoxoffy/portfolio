@@ -19,7 +19,6 @@ const MainSection: React.FunctionComponent<Props> = ({
         <AnimText
           animText="Samouk programowania, a oto moje projekty"
           animWrapper="span"
-          animSpeed={40}
         />
 
         <button className="portfolio-button" onClick={onPortfolioButtonClick}>
