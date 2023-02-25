@@ -40,6 +40,7 @@ const ContactForm: React.FunctionComponent = () => {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     setIsErrorValidation(false);
+    setIsErrorAPI(false);
     setToSend({ ...toSend, [event.target.name]: event.target.value });
   };
 
