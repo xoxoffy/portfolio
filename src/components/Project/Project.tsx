@@ -3,16 +3,22 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Project.css';
 
-const Project = () => {
-  var settings = {
+interface Props {
+  img1: string | undefined;
+  img2: string | undefined;
+  img3: string | undefined;
+}
+
+const Project: React.FunctionComponent<Props> = ({ img1, img2, img3 }) => {
+  const settings = {
     dots: true,
-    fade: true,
     autoplay: true,
     infinite: true,
     speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <div className="project">
       <div className="project-title">
@@ -20,16 +26,13 @@ const Project = () => {
       </div>
       <Slider {...settings}>
         <div>
-          <img src="http://placekitten.com/g/400/200" />
+          <img src={img1} />
         </div>
         <div>
-          <img src="http://placekitten.com/g/400/200" />
+          <img src={img2} />
         </div>
         <div>
-          <img src="http://placekitten.com/g/400/200" />
-        </div>
-        <div>
-          <img src="http://placekitten.com/g/400/200" />
+          <img src={img3} />
         </div>
       </Slider>
       <div className="project-description">Description</div>

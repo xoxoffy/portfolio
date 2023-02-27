@@ -19,7 +19,8 @@
 
 .slick-slide img {
   margin: auto;
-  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
   border-radius: 90px;
 }
 
