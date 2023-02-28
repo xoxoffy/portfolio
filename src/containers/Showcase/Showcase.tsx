@@ -12,8 +12,8 @@ const Showcase: React.FunctionComponent = () => {
   return (
     <div className="showcase">
       <AnimText animText="Moje projekty" animWrapper="h1" />
-      <Project img1={pomo1} img2={pomo2} img3={pomo3} />
-      <Project img1={cart1} img2={cart2} img3={cart3} />
+      <Project title="Pomodoro" img1={pomo1} img2={pomo2} img3={pomo3} />
+      <Project title="Shopping Cart" img1={cart1} img2={cart2} img3={cart3} />
     </div>
   );
 };

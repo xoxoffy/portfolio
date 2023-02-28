@@ -4,12 +4,18 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Project.css';
 
 interface Props {
+  title: string;
   img1: string | undefined;
   img2: string | undefined;
   img3: string | undefined;
 }
 
-const Project: React.FunctionComponent<Props> = ({ img1, img2, img3 }) => {
+const Project: React.FunctionComponent<Props> = ({
+  title,
+  img1,
+  img2,
+  img3,
+}) => {
   const settings = {
     dots: true,
     autoplay: true,
@@ -22,7 +28,7 @@ const Project: React.FunctionComponent<Props> = ({ img1, img2, img3 }) => {
   return (
     <div className="project">
       <div className="project-title">
-        <h2>Title</h2>
+        <h2>{title}</h2>
       </div>
       <Slider {...settings}>
         <div>
