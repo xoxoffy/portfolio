@@ -6,6 +6,7 @@ import './Project.css';
 interface Props {
   title: string;
   description: string;
+  href: string;
   img1: string | undefined;
   img2: string | undefined;
   img3: string | undefined;
@@ -14,6 +15,7 @@ interface Props {
 const Project: React.FunctionComponent<Props> = ({
   title,
   description,
+  href,
   img1,
   img2,
   img3,
@@ -32,11 +34,7 @@ const Project: React.FunctionComponent<Props> = ({
     <div className="project">
       <div className="project-title">
         <h2>
-          <a
-            href="https://github.com/xoxoffy/pomodoro"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={href} target="_blank" rel="noreferrer">
             {title}
           </a>
         </h2>

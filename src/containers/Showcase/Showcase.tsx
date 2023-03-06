@@ -16,6 +16,7 @@ const Showcase: React.FunctionComponent = () => {
       <Project
         title="Pomodoro"
         description="Własna wersja popularnej strony do zarządzania czasem wykorzystująca m.in Redux Toolkit"
+        href="https://github.com/xoxoffy/pomodoro"
         img1={pomo1}
         img2={pomo2}
         img3={pomo3}
@@ -23,6 +24,7 @@ const Showcase: React.FunctionComponent = () => {
       <Project
         title="Shopping Cart"
         description="Projekt typowego wózka sklepowego z produktami wykorzystujący React Query, Styled Components oraz Material UI"
+        href="https://github.com/xoxoffy/typescript-shopping-cart"
         img1={cart1}
         img2={cart2}
         img3={cart3}
@@ -30,6 +32,7 @@ const Showcase: React.FunctionComponent = () => {
       <Project
         title="Budget Planner"
         description="Planer budżetu domowego wykorzystujący wszystkie akcje CRUD"
+        href="https://github.com/xoxoffy/js-budget"
         img1={budget1}
         img2={budget2}
         img3={budget3}
