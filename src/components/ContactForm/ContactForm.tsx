@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactForm.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { send } from 'emailjs-com';
 
 const ContactForm: React.FunctionComponent = () => {
@@ -10,8 +10,9 @@ const ContactForm: React.FunctionComponent = () => {
     reply_to: '',
   });
 
-  const [isErrorValidation, setIsErrorValidation] = useState(false);
-  const [isErrorAPI, setIsErrorAPI] = useState(false);
+  const [isErrorValidation, setIsErrorValidation] = useState<boolean>(false);
+  const [isErrorAPI, setIsErrorAPI] = useState<boolean>(false);
+  const [isSentSuccessful, setIsSentSuccessful] = useState<boolean>(false);
 
   const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -22,16 +23,24 @@ const ContactForm: React.FunctionComponent = () => {
 
     if (!toSend.from_name || !toSend.reply_to || !toSend.message) {
       setIsErrorValidation(true);
+      setIsSentSuccessful(false);
+      return;
     }
-
     send(SERVICE_ID, TEMPLATE_ID, toSend, PUBLIC_KEY)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        setIsSentSuccessful(true);
       })
       .catch((err) => {
         console.log('FAILED...', err);
         setIsErrorAPI(true);
       });
+
+    setToSend({
+      from_name: '',
+      message: '',
+      reply_to: '',
+    });
   };
 
   const handleChange = (
@@ -72,6 +81,9 @@ const ContactForm: React.FunctionComponent = () => {
       <button type="submit">Wyślij</button>
       {isErrorValidation ? <h3>Prosze wypełnić wszystkie pola.</h3> : null}
       {isErrorAPI ? <h3>Ups! Coś poszło nie tak.</h3> : null}
+      {isSentSuccessful ? (
+        <h4>Wiadomość wysłana pomyślnie. Dziękuje :)</h4>
+      ) : null}
     </form>
   );
 };

@@ -5,6 +5,7 @@ import './Project.css';
 
 interface Props {
   title: string;
+  description: string;
   img1: string | undefined;
   img2: string | undefined;
   img3: string | undefined;
@@ -12,6 +13,7 @@ interface Props {
 
 const Project: React.FunctionComponent<Props> = ({
   title,
+  description,
   img1,
   img2,
   img3,
@@ -23,12 +25,21 @@ const Project: React.FunctionComponent<Props> = ({
     speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
   };
 
   return (
     <div className="project">
       <div className="project-title">
-        <h2>{title}</h2>
+        <h2>
+          <a
+            href="https://github.com/xoxoffy/pomodoro"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {title}
+          </a>
+        </h2>
       </div>
       <Slider {...settings}>
         <div>
@@ -41,7 +52,9 @@ const Project: React.FunctionComponent<Props> = ({
           <img src={img3} />
         </div>
       </Slider>
-      <div className="project-description">Description</div>
+      <div className="project-description">
+        <span>{description}</span>
+      </div>
     </div>
   );
 };

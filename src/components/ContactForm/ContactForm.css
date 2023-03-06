@@ -27,6 +27,10 @@
   color: red;
   font-weight: 500;
 }
+.contact-form h4 {
+  color: rgb(28, 177, 28);
+  font-weight: bold;
+}
 
 .contact-form button:hover {
   background-color: rgb(172, 170, 170);
@@ -67,4 +71,8 @@
 
 .message-field:hover {
   border: whitesmoke;
+}
+
+textarea {
+  resize: none;
 }
