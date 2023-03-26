@@ -22,10 +22,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavBar
-        onPortfolioButtonClick={handleClickScrollPortfolio}
-        onContactButtonClick={handleClickScrollContact}
-      />
+      <div className="NavBar">
+        <NavBar
+          onPortfolioButtonClick={handleClickScrollPortfolio}
+          onContactButtonClick={handleClickScrollContact}
+        />
+      </div>
       <MainSection onPortfolioButtonClick={handleClickScrollPortfolio} />
 
       <div id="showcase">
