@@ -8,6 +8,8 @@ const resources = {
   en: {
     translation: {
       'Welcome to React': 'Welcome to React and react-i18next',
+      'Własna wersja popularnej strony do zarządzania czasem wykorzystująca m.in Redux Toolkit',
+      
     },
   },
   pl: {
