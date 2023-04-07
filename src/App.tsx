@@ -4,6 +4,7 @@ import NavBar from './components/Navbar/Navbar';
 import Showcase from './containers/Showcase/Showcase';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
   const handleClickScrollPortfolio = () => {
@@ -20,8 +21,11 @@ const App = () => {
     }
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="App">
+      <h1>{t('Test')}</h1>
       <div className="NavBar">
         <NavBar
           onPortfolioButtonClick={handleClickScrollPortfolio}
