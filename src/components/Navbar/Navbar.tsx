@@ -23,6 +23,7 @@ const NavBar: React.FunctionComponent<Props> = ({
         <button onClick={onContactButtonClick}>
           <h3>kontakt</h3>
         </button>
+        <button>flaga</button>
       </div>
     </nav>
   );
