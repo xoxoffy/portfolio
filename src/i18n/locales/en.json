@@ -1,5 +1,22 @@
 {
   "translation": {
-    "Test": "TestEN"
+    "Contact": "contact",
+    "Hi": "Hi!",
+    "Im Dominik": "I'm Dominik.",
+    "About me": "Self-taught programmer and these are my projects",
+    "Check out": "Check out",
+    "Current projects": "Some of my projects",
+    "About Pomodoro": "My own take on the Pomodoro site using Redux Toolkit",
+    "About shopping cart": "A typical shopping cart project using React Query, Styled Components and Material UI",
+    "About planner": "A budget planner handling all CRUD actions",
+    "Contact Me": "Contact me!",
+    "Location": "Szczecin, Poland",
+    "Your name": "Your Name*",
+    "Your email": "Your E-Mail*",
+    "Your message": "Your Message*",
+    "Send": "Send",
+    "Enter all fields": "All input fields are required.",
+    "Something went wrong": "Oops! Something went wrong.",
+    "Message sent succesful": "Message sent successfully. Thank you :)"
   }
 }

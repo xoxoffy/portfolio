@@ -4,18 +4,21 @@ import AnimText from '../../components/TypeAnimation/AnimText';
 import { pomoImages } from '../../images/images';
 import { cartImages } from '../../images/images';
 import { budgetImages } from './../../images/images';
+import { useTranslation } from 'react-i18next';
 
 const Showcase: React.FunctionComponent = () => {
   const [pomo1, pomo2, pomo3] = pomoImages;
   const [cart1, cart2, cart3] = cartImages;
   const [budget1, budget2, budget3] = budgetImages;
 
+  const { t } = useTranslation();
+
   return (
     <div className="showcase">
-      <AnimText animText="Moje projekty" animWrapper="h1" />
+      <h1>{t('Current projects')}</h1>
       <Project
         title="Pomodoro"
-        description="Własna wersja popularnej strony do zarządzania czasem wykorzystująca m.in Redux Toolkit"
+        description={t('About Pomodoro')}
         href="https://github.com/xoxoffy/pomodoro"
         img1={pomo1}
         img2={pomo2}
@@ -23,7 +26,7 @@ const Showcase: React.FunctionComponent = () => {
       />
       <Project
         title="Shopping Cart"
-        description="Projekt typowego wózka sklepowego z produktami wykorzystujący React Query, Styled Components oraz Material UI"
+        description={t('About shopping cart')}
         href="https://github.com/xoxoffy/typescript-shopping-cart"
         img1={cart1}
         img2={cart2}
@@ -31,7 +34,7 @@ const Showcase: React.FunctionComponent = () => {
       />
       <Project
         title="Budget Planner"
-        description="Planer budżetu domowego wykorzystujący wszystkie akcje CRUD"
+        description={t('About planner')}
         href="https://github.com/xoxoffy/js-budget"
         img1={budget1}
         img2={budget2}

@@ -1,5 +1,6 @@
 import AnimText from '../TypeAnimation/AnimText';
 import './MainSection.css';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   onPortfolioButtonClick: () => void;
@@ -8,21 +9,22 @@ interface Props {
 const MainSection: React.FunctionComponent<Props> = ({
   onPortfolioButtonClick,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="img-background">
       <section className="main-section">
         <h1>
-          Cześć!
-          <br /> Jestem Dominik.
+          {t('Hi')}
+          <br /> {t('Im Dominik')}
         </h1>
 
-        <AnimText
-          animText="Samouk programowania, a oto moje projekty"
-          animWrapper="span"
-        />
+        {/* <AnimText animText={t('About me')} animWrapper="span" /> */}
+
+        <span>{t('About me')}</span>
 
         <button className="portfolio-button" onClick={onPortfolioButtonClick}>
-          Sprawdź
+          {t('Check out')}
         </button>
       </section>
     </div>

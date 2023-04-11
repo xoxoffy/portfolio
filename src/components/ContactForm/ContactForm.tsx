@@ -1,7 +1,8 @@
 import React from 'react';
 import './ContactForm.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { send } from 'emailjs-com';
+import { useTranslation } from 'react-i18next';
 
 const ContactForm: React.FunctionComponent = () => {
   const [toSend, setToSend] = useState({
@@ -53,9 +54,11 @@ const ContactForm: React.FunctionComponent = () => {
     setToSend({ ...toSend, [event.target.name]: event.target.value });
   };
 
+  const { t } = useTranslation();
+
   return (
     <form className="contact-form" onSubmit={onSubmit}>
-      <label>Twoje imie*</label>
+      <label>{t('Your name')}</label>
       <input
         type="text"
         name="from_name"
@@ -63,7 +66,7 @@ const ContactForm: React.FunctionComponent = () => {
         onChange={handleChange}
         className="basic-field"
       />
-      <label>Twój E-Mail*</label>
+      <label>{t('Your email')}</label>
       <input
         type="text"
         name="reply_to"
@@ -71,19 +74,17 @@ const ContactForm: React.FunctionComponent = () => {
         onChange={handleChange}
         className="basic-field"
       />
-      <label>Twoja wiadomość*</label>
+      <label>{t('Your message')}</label>
       <textarea
         name="message"
         value={toSend.message}
         onChange={handleChange}
         className="message-field"
       />
-      <button type="submit">Wyślij</button>
-      {isErrorValidation ? <h3>Prosze wypełnić wszystkie pola.</h3> : null}
-      {isErrorAPI ? <h3>Ups! Coś poszło nie tak.</h3> : null}
-      {isSentSuccessful ? (
-        <h4>Wiadomość wysłana pomyślnie. Dziękuje :)</h4>
-      ) : null}
+      <button type="submit">{t('Send')}</button>
+      {isErrorValidation ? <h3>{t('Enter all fields')}</h3> : null}
+      {isErrorAPI ? <h3>{t('Something went wrong')}</h3> : null}
+      {isSentSuccessful ? <h4>{t('Message sent succesful')}</h4> : null}
     </form>
   );
 };

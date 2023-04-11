@@ -1,5 +1,22 @@
 {
   "translation": {
-    "Test": "TestPL"
+    "Contact": "kontakt",
+    "Hi": "Cześć!",
+    "Im Dominik": "Jestem Dominik.",
+    "About me": "Samouk programowania, a oto moje projekty",
+    "Check out": "Sprawdź",
+    "Current projects": "Parę moich dotychczasowych projektów",
+    "About Pomodoro": "Własna wersja popularnej strony do zarządzania czasem wykorzystująca m.in Redux Toolkit",
+    "About shopping cart": "Projekt typowego wózka sklepowego z produktami wykorzystujący React Query, Styled Components oraz Material UI",
+    "About planner": "Planer budżetu domowego wykorzystujący wszystkie akcje CRUD",
+    "Contact Me": "Skontaktujmy się!",
+    "Location": "Szczecin, Polska",
+    "Your name": "Twoje imie*",
+    "Your email": "Twój E-Mail*",
+    "Your message": "Twoja wiadomość*",
+    "Send": "Wyślij",
+    "Enter all fields": "Prosze wypełnić wszystkie pola.",
+    "Something went wrong": "Ups! Coś poszło nie tak.",
+    "Message sent succesful": "Wiadomość wysłana pomyślnie. Dziękuje :)"
   }
 }
